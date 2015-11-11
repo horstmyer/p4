@@ -43,4 +43,4 @@ class CreatePetsTable extends Migration
     {
         Schema::drop('pets');
     }
-}
+}   
