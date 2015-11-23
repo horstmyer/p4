@@ -7,17 +7,26 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class PetsController extends Controller
+class TestController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function create()
+    public function getIndex()
     {
+        return 'The Test Index Page';
+    }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getCreate()
+    {
+        return 'The Test Create Page';
     }
 
     /**
@@ -26,10 +35,20 @@ class PetsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-
-    public function show($id)
+    public function getStore(Request $request)
     {
-        //
+        return 'The Test Store Page';
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function getShow()
+    {
+        return 'The Test Show Page';
     }
 
     /**
@@ -38,13 +57,9 @@ class PetsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function getEdit($id)
     {
-      DB::table('pets')->insert(array(
-        array('price' => 400, 'product' => 'Laptop'),
-        array('price' => 200, 'product' => 'Smartphone'),
-        array('price' => 50,  'product' => 'Accessory'),
-      ));
+        return 'The Test Edit Page';
     }
 
     /**
@@ -54,9 +69,9 @@ class PetsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function getUpdate(Request $request, $id)
     {
-        //
+        return 'The Test Update Page';
     }
 
     /**

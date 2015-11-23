@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>@yield('title','Register Your Pet'))</title>
+<title>@yield('title','Register Your Pet')</title>
 <link href="css/styles.css" rel="stylesheet" type="text/css">
 <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/kaushan-script:n4:default.js" type="text/javascript"></script>
 </head>

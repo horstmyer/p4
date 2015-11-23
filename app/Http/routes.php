@@ -11,38 +11,23 @@
 |
 */
 
+// home page
 Route::get('/', function () {
     return view('auth/login');
 });
-// Add Pet routes....
-
-Route::get('/register', function () {
-    return view('auth/register');
-});
-
-Route::get('/profile', function () {
-    return view('auth/profile');
-});
 
 
+Route::get('/signup', 'ProfilesController@getCreate');
+Route::get('/profile', 'ProfilesController@getShow');
+Route::get('/edit', 'ProfilesController@getEdit');
+
+
+Route::post('/profile', 'ProfilesController@postCreate');
+Route::post('/profile/edit', 'ProfilesController@postEdit');
 
 
 
-// Authentication routes...
-Route::get('auth/login', 'Auth\AuthController@getLogin');
-Route::post('auth/login', 'Auth\AuthController@postLogin');
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
-
-// Registration routes...
-Route::get('auth/register', 'Auth\AuthController@getRegister');
-Route::post('auth/register', 'Auth\AuthController@postRegister');
-
-
-Route::controllers([
-   'password' => 'Auth\PasswordController',
-]);
-
-
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 Route::get('/debug', function() {
 
     echo '<pre>';

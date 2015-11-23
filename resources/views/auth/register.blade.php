@@ -11,58 +11,52 @@ such as a page specific styesheets.
 
 @section('intro')
 <h1>Register Your Pet</h1>
-<h2>Please Enger Your Information</h2>
+<h2>Please Enter Your Information</h2>
+<div>
 <form method="POST" action="/auth/register">
-    	  Name
-        <input type="text" name="name" value="{{ old('name') }}"><br />
-        Email
-        <input type="email" name="email" value="{{ old('email') }}"><br />
-        Password
-        <input type="password" name="password"><br />
-        Confirm Password
-        <input type="password" name="password_confirmation"><br />
-        <br />
-        Address
-        <input type="text" name="address" value="{{ old('name') }}"><br />
-        Phone
-        <input type="text" name="Phone" value="{{ old('name') }}"><br /><br />
-        <h2>Your Pets</h2>
-        <h3>Pet1</h3>Name
-        <input type="text" name="p1name" value="{{ old('name') }}">
-        Breed
-        <input type="text" name="p1breed" value="{{ old('name') }}">
-        Upload Photo
-        <input type="file" name="p1photo" value="{{ old('name') }}">
-        Status:&nbsp;&nbsp;
-        Home<input type="radio" name="p1home" value="Home" checked>
-        Missing<input type="radio" name="p1missing" value="Missing">
-      	<h3>Pet2</h3>Name
-        <input type="text" name="p2name" value="{{ old('name') }}">
-        Breed
-        <input type="text" name="p2breed" value="{{ old('name') }}">
-        Upload Photo
-        <input type="file" name="p2photo" value="{{ old('name') }}">
-        Status:&nbsp;&nbsp;
-        Home<input type="radio" name="p2home" value="Home" checked>
-        Missing<input type="radio" name="p2missing" value="Missing">
-        <h3>Pet3</h3>Name
-        <input type="text" name="p3name" value="{{ old('name') }}">
-        Breed
-        <input type="text" name="p3breed" value="{{ old('name') }}">
-        Upload Photo
-        <input type="file" name="p3photo" value="{{ old('name') }}">
-        Status:&nbsp;&nbsp;
-        Home<input type="radio" name="p3home" value="Home" checked>
-        Missing<input type="radio" name="p3missing" value="Missing">
-        <h3>Pet4</h3>Name
-        <input type="text" name="p1name" value="{{ old('name') }}">
-        Breed
-        <input type="text" name="p1breed" value="{{ old('name') }}">
-        Upload Photo
-        <input type="file" name="p1photo" value="{{ old('name') }}">
-        Status:&nbsp;&nbsp;
-        Home<input type="radio" name="p4home" value="Home" checked>
-        Missing<input type="radio" name="p4missing" value="Missing"> <br /><br />
-        <button type="submit">Submit</button>
+	{!! csrf_field() !!}
+	<div class="regform">
+    	<p>Name <input type="text" name="name" value="">
+        Email <input type="email" name="email" value="{{ old('email') }}"></p>
+        <p>Password <input type="password" name="password"></p>
+        <p>Confirm Password <input type="password" name="password_confirmation"></p>
+        <p>Address <input name="address" type="text" value="" size="50"></p>
+        <p>Phone <input type="text" name="Phone" value=""></p><br /><br />
+        <hr/>
+  	</div>
+    <div>
+        <h1>Your Pets</h1>
+        <div class="p1">
+        	<h3>Pet1</h3>
+           		<p>Name <input type="text" name="p1name" value=""></p>
+        		<p>Breed <input type="text" name="p1breed" value=""></p>
+        		<p>Photo <input type="file" name="p1photo" value=""></p>
+        		<p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>
+        </div>
+        <div class="p2">
+        	<h3>Pet2</h3>
+           		<p>Name <input type="text" name="p1name" value=""></p>
+        		<p>Breed <input type="text" name="p1breed" value=""></p>
+        		<p>Photo <input type="file" name="p1photo" value=""></p>
+        		<p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>
+        </div>
+        <div class="p3">
+        	<h3>Pet3</h3>
+           		<p>Name <input type="text" name="p1name" value=""></p>
+        		<p>Breed <input type="text" name="p1breed" value=""></p>
+        		<p>Photo <input type="file" name="p1photo" value=""></p>
+        		<p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>
+        </div>
+        <div class="p4">
+        	<h3>Pet4</h3>
+           		<p>Name <input type="text" name="p1name" value=""></p>
+        		<p>Breed <input type="text" name="p1breed" value=""></p>
+        		<p>Photo <input type="file" name="p1photo" value=""></p>
+        		<p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>
+        </div>
+
+        </div><br /><br />
+        <button type="submit">Register</button>
 </form>
+</div>
 @stop
