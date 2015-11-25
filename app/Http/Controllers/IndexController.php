@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class ProfilesController extends Controller
+class IndexController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class ProfilesController extends Controller
      */
     public function getIndex()
     {
-      //return view('signup.index');
+        return view('index');
     }
 
     /**
@@ -24,10 +24,9 @@ class ProfilesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getCreate()
+    public function create()
     {
-        return view('signup.index');
-        //return 'sign up form';
+        //
     }
 
     /**
@@ -36,15 +35,9 @@ class ProfilesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function postCreate(Request $request)
+    public function store(Request $request)
     {
-
-      //return 'Posting Data to Profile';
-
-      //  \Session::flash('flash_message', 'Welcome!');
-
-      return view('profile.index');
-
+        //
     }
 
     /**
@@ -53,9 +46,9 @@ class ProfilesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function getProfile()
+    public function show($id)
     {
-        return view('profile.index');
+        //
     }
 
     /**
@@ -64,9 +57,9 @@ class ProfilesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function getEdit()
+    public function edit($id)
     {
-       return view ('profile.edit');
+        //
     }
 
     /**
@@ -76,9 +69,9 @@ class ProfilesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function postEdit(Request $request, $id)
+    public function update(Request $request, $id)
     {
-        return view('profile.index');
+        //
     }
 
     /**

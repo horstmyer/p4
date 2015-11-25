@@ -12,18 +12,13 @@
 */
 
 // home page
-Route::get('/', function () {
-    return view('auth/login');
-});
 
-
+Route::get('/', 'IndexController@getIndex');
 Route::get('/signup', 'ProfilesController@getCreate');
-Route::get('/profile', 'ProfilesController@getShow');
+Route::get('/signup', 'ProfilesController@postCreate');
+Route::get('/profile', 'ProfilesController@getProfile');
 Route::get('/edit', 'ProfilesController@getEdit');
-
-
-Route::post('/profile', 'ProfilesController@postCreate');
-Route::post('/profile/edit', 'ProfilesController@postEdit');
+Route::post('/edit', 'ProfilesController@postEdit');
 
 
 

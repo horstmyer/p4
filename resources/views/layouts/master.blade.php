@@ -28,6 +28,7 @@
     </div>
     <!-- Begin Missing Pets -->
     <div class="missing">
+			 <section>@yield('buttons')</section>
     	<!-- Phase II display of missing critters
     	<table width="800" border="1">
   		<tbody>

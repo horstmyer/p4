@@ -20,10 +20,8 @@ such as a page specific styesheets.
     <h2>Your Profile</h2>
     <form method="POST" action="/register">
 <div class="regform">
-    <p>Name <input type="text" name="name" value="">
-      Email <input type="email" name="email" value="{{ old('email') }}"></p>
-      <p>Password <input type="password" name="password"></p>
-      <!--<p>Confirm Password <input type="password" name="password_confirmation"></p>-->
+    <p>Name
+      Email
       <p>Address <input name="address" type="text" value="" size="50"></p>
       <p>Phone <input type="text" name="phone" value=""></p><br /><br />
       <button type="submit">Register</button>
