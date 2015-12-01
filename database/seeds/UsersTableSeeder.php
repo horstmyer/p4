@@ -19,6 +19,8 @@ class UsersTableSeeder extends Seeder
      'email' => $faker->email,
      'password' => $faker->password,
      'name' => 'LaLa Mills',
+     'address' => $faker->address,
+     'phone' => $faker->phoneNumber,
      ]);
 
      DB::table('users')->insert([
@@ -27,6 +29,8 @@ class UsersTableSeeder extends Seeder
     'email' => $faker->email,
     'password' => $faker->password,
     'name' => 'Mike Smith',
+    'address' => $faker->address,
+    'phone' => $faker->phoneNumber,
     ]);
 
     DB::table('users')->insert([
@@ -35,6 +39,8 @@ class UsersTableSeeder extends Seeder
    'email' => $faker->email,
    'password' => $faker->password,
    'name' => 'Dolly Parton',
+   'address' => $faker->address,
+   'phone' => $faker->phoneNumber,
    ]);
     }
 }

@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pet extends Model
 {
-  public function profile() {
-    # Pet belongs to Profile
+  public function run() {
+    # Pet belongs to User
     # Define an inverse one-to-many relationship.
-    return $this->belongsTo('\App\Profile');
+    return $this->belongsTo('\App\User');
   }
 }

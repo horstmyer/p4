@@ -40,11 +40,7 @@ class PetsController extends Controller
      */
     public function edit($id)
     {
-      DB::table('pets')->insert(array(
-        array('price' => 400, 'product' => 'Laptop'),
-        array('price' => 200, 'product' => 'Smartphone'),
-        array('price' => 50,  'product' => 'Accessory'),
-      ));
+      
     }
 
     /**
