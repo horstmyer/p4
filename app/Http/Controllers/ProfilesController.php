@@ -16,7 +16,8 @@ class ProfilesController extends Controller
      */
     public function getIndex()
     {
-      //return view('signup.index');
+      return view('profile.index');
+      //return 'here is the profile';
     }
 
     /**
@@ -26,7 +27,7 @@ class ProfilesController extends Controller
      */
     public function getCreate()
     {
-        return view('signup.index');
+        //return view('signup.index');
         //return 'sign up form';
     }
 
@@ -36,14 +37,14 @@ class ProfilesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function postCreate(Request $request)
+    public function postProfile(Request $request)
     {
 
-      //return 'Posting Data to Profile';
+      return 'Posting Data to Profile';
 
       //  \Session::flash('flash_message', 'Welcome!');
 
-      return view('profile.index');
+      //return view('profile.index');
 
     }
 
@@ -55,7 +56,7 @@ class ProfilesController extends Controller
      */
     public function getProfile()
     {
-        return view('profile.index');
+        //return view('profile.index');
     }
 
     /**
@@ -66,7 +67,7 @@ class ProfilesController extends Controller
      */
     public function getEdit()
     {
-       return view ('profile.edit');
+       //return view ('profile.edit');
     }
 
     /**
@@ -78,7 +79,7 @@ class ProfilesController extends Controller
      */
     public function postEdit(Request $request, $id)
     {
-        return view('profile.index');
+        //return view('profile.index');
     }
 
     /**

@@ -18,61 +18,8 @@ such as a page specific styesheets.
 @section('intro')
 <div class="output">
     <h2>Your Profile</h2>
-    <form method="POST" action="/register">
-<div class="regform">
-    <p>Name
-      Email
-      <p>Address <input name="address" type="text" value="" size="50"></p>
-      <p>Phone <input type="text" name="phone" value=""></p><br /><br />
-      <button type="submit">Register</button>
-  </div>
-  </form>
-  </div>
-  <hr />
-  <div>
-  <form method="POST" action="/addpet">
-    <h1>Your Pets</h1>
-    <div class="p1">
-      <h3>Pet1</h3>
-          <p>Name <input type="text" name="p1name" value=""></p>
-        <p>Breed <input type="text" name="p1breed" value=""></p>
-        <p>Photo <input type="file" name="p1photo" value=""></p>
-        <p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>
-            <button type="submit">Add Pet</button>
-    </div>
-    </form>
-    <form method="POST" action="/addpet">
-    <div class="p2">
-      <h3>Pet2</h3>
-          <p>Name <input type="text" name="p1name" value=""></p>
-        <p>Breed <input type="text" name="p1breed" value=""></p>
-        <p>Photo <input type="file" name="p1photo" value=""></p>
-        <p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>
-            <button type="submit">Add Pet</button>
-    </div>
-    </form>
-    <form method="POST" action="/addpet">
-    <div class="p3">
-      <h3>Pet3</h3>
-              <p>Name <input type="text" name="p1name" value=""></p>
-        <p>Breed <input type="text" name="p1breed" value=""></p>
-        <p>Photo <input type="file" name="p1photo" value=""></p>
-        <p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>
-            <button type="submit">Add Pet</button>
-    </div>
-    </form>
-    <form method="POST" action="/addpet">
-    <div class="p4">
-      <h3>Pet4</h3>
-          <p>Name <input type="text" name="p1name" value=""></p>
-        <p>Breed <input type="text" name="p1breed" value=""></p>
-        <p>Photo <input type="file" name="p1photo" value=""></p>
-        <p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>
-    </div>
+</div>  
 
-    </div><br /><br />
-    <button type="submit">Add Pet</button>
-</form>
 @stop
 
 {{--

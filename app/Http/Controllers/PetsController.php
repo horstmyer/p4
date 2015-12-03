@@ -15,9 +15,14 @@ class PetsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function create()
+    public function getProfile()
     {
+      // get profile information
+      $pets = \App\Pet::where('user_id', '=', \Auth::id())->orderBy('id', 'DESC')->get();
 
+      //return view('profile.index')->with ('pets', $pets);
+      //echo ('pets', $pets);
+      dump ($pets->toArray());
     }
 
     /**
@@ -40,7 +45,7 @@ class PetsController extends Controller
      */
     public function edit($id)
     {
-      
+
     }
 
     /**

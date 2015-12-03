@@ -11,14 +11,46 @@
 |
 */
 
-// home page
-
+// home page, show login
 Route::get('/', 'IndexController@getIndex');
+
+// Process login form
+Route::post('/login', 'Auth\AuthController@postLogin');
+
+// Show Signup/Register
 Route::get('/signup', 'ProfilesController@getCreate');
+
+// Process Signup/Register
 Route::get('/signup', 'ProfilesController@postCreate');
-Route::get('/profile', 'ProfilesController@getProfile');
+
+// Show Profile
+Route::get('/profile', 'ProfilesController@getIndex');
+Route::post('/profile', 'ProfilesController@postProfile');
+
+// Show Edit Profile
 Route::get('/edit', 'ProfilesController@getEdit');
 Route::post('/edit', 'ProfilesController@postEdit');
+
+// Process logout
+Route::get('/logout', 'Auth\AuthController@getLogout');
+
+
+// Process Missing
+//Route::post('/missing', 'MissingController@getIndex');
+
+
+Route::get('/confirm-login-worked', function() {
+    # You may access the authenticated user via the Auth facade
+    $user = Auth::user();
+    if($user) {
+        echo 'You are logged in.';
+        dump($user->toArray());
+    } else {
+        echo 'You are not logged in.';
+    }
+    return;
+});
+
 
 
 

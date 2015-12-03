@@ -13,7 +13,8 @@ such as a page specific styesheets.
 @section('login')
 <div class="colr">
   <h2><img src="images/paws.gif" width="25" height="22" alt=""/>Sign In<img src="images/paws.gif" width="25" height="22" alt=""/></h2>
-  <form method="POST" action="/auth/login">
+  <form method="POST" action="/login">
+    {!! csrf_field() !!}
     <div>
       Email <input type="email" name="email" >
     </div>
