@@ -16,7 +16,9 @@ class ProfilesController extends Controller
      */
     public function getIndex()
     {
-      return view('profile.index');
+      //get the pets
+      $pets = \App\Pet::where('user_id', '=', \Auth::id())->orderBy('id', 'DESC')->get();
+      return view('profile.index')->with('pets', $pets);
       //return 'here is the profile';
     }
 
