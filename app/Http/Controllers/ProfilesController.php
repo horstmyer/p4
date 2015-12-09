@@ -45,9 +45,6 @@ class ProfilesController extends Controller
      */
     public function postProfile(Request $request)
     {
-             return redirect('/books');
-
-      return 'Posting Data to Profile';
 
       //  \Session::flash('flash_message', 'Welcome!');
 
