@@ -56,7 +56,7 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
-            'address' => 'required|max255',
+            'address' => 'required|max:255',
             'phone' => 'required',
         ]);
     }
@@ -77,13 +77,7 @@ class AuthController extends Controller
             'phone' => $data['phone']
         ]);
 
-        return Pet::create([
-            'petName' => $data['petName'],
-            'breed' => $data['breed'],
-            'photo' => $data['photo'],
+    
 
-        ]);
-
-        
     }
 }

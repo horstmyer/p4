@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Your profile_id
+    Your Profile
 @stop
 
 
@@ -20,8 +20,6 @@ such as a page specific styesheets.
     <h2>Your Profile</h2>
     <div>
         {{ $user->name}}<br />
-        {{ $user->address}}<br />
-        {{ $user->phone}}<br />
     </div>
     @if(sizeof($pets) == 0)
       No pets

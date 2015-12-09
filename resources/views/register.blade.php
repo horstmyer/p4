@@ -13,7 +13,7 @@ such as a page specific styesheets.
 <h1>Register Your Pet</h1>
 <h2>Please Enter Your Information</h2>
 <div>
-<form method="POST" action="/auth/register">
+<form method="POST" action="/register">
 	{!! csrf_field() !!}
 	<div class="regform">
     	<p>Name <input type="text" name="name" value="">
