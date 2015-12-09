@@ -18,13 +18,18 @@ such as a page specific styesheets.
 @section('intro')
 <div class="output">
     <h2>Your Profile</h2>
+    <div>
+        {{ $user->name}}<br />
+        {{ $user->address}}<br />
+        {{ $user->phone}}<br />
+    </div>
     @if(sizeof($pets) == 0)
       No pets
     @else
       @foreach($pets as $pet)
         <div>
-          <h2>{{  $pet->petName}}</h2>
-          <p>{{  $pet->breed}}</p>
+          <h2>{{ $pet->petName }}</h2>
+          <p>{{ $pet->breed }}</p>
         </div>
      @endforeach
    @endif

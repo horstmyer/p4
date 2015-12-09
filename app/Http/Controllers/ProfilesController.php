@@ -21,15 +21,19 @@ class ProfilesController extends Controller
       return view('profile.index')->with('pets', $pets);
       //return 'here is the profile';
     }
-
+    public function getCreate()
+       {
+           return view('auth.register');
+           //return 'sign up form';
+       }
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function getCreate()
+    public function postCreate()
     {
-        //return view('signup.index');
+        return view('auth.register');
         //return 'sign up form';
     }
 
@@ -41,6 +45,7 @@ class ProfilesController extends Controller
      */
     public function postProfile(Request $request)
     {
+             return redirect('/books');
 
       return 'Posting Data to Profile';
 
@@ -69,7 +74,7 @@ class ProfilesController extends Controller
      */
     public function getEdit()
     {
-       //return view ('profile.edit');
+       return view ('profile.edit');
     }
 
     /**

@@ -18,10 +18,10 @@ Route::get('/', 'IndexController@getIndex');
 Route::post('/login', 'Auth\AuthController@postLogin');
 
 // Show Signup/Register
-Route::get('/signup', 'ProfilesController@getCreate');
+Route::get('/register', 'Auth\AuthController@getRegister');
 
 // Process Signup/Register
-Route::get('/signup', 'ProfilesController@postCreate');
+Route::post('/register', 'Auth\AuthController@postRegister');
 
 // Show Profile
 Route::get('/profile', 'ProfilesController@getIndex');

@@ -28,31 +28,31 @@ such as a page specific styesheets.
         <h1>Your Pets</h1>
         <div class="p1">
         	<h3>Pet1</h3>
-           		<p>Name <input type="text" name="p1name" value=""></p>
-        		<p>Breed <input type="text" name="p1breed" value=""></p>
-        		<p>Photo <input type="file" name="p1photo" value=""></p>
-        		<p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>
+           		<p>Name <input type="text" name="petName" value=""></p>
+        		<p>Breed <input type="text" name="breed" value=""></p>
+        		<p>Photo <input type="file" name="photo" value=""></p>
+        		<!--<p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>-->
         </div>
         <div class="p2">
         	<h3>Pet2</h3>
-           		<p>Name <input type="text" name="p1name" value=""></p>
-        		<p>Breed <input type="text" name="p1breed" value=""></p>
-        		<p>Photo <input type="file" name="p1photo" value=""></p>
-        		<p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>
+           		<p>Name <input type="text" name="petName" value=""></p>
+        		<p>Breed <input type="text" name="breed" value=""></p>
+        		<p>Photo <input type="file" name="photo" value=""></p>
+        		<!--<p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>-->
         </div>
         <div class="p3">
         	<h3>Pet3</h3>
-           		<p>Name <input type="text" name="p1name" value=""></p>
-        		<p>Breed <input type="text" name="p1breed" value=""></p>
-        		<p>Photo <input type="file" name="p1photo" value=""></p>
-        		<p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>
+           		<p>Name <input type="text" name="petName" value=""></p>
+        		<p>Breed <input type="text" name="breed" value=""></p>
+        		<p>Photo <input type="file" name="photo" value=""></p>
+        		<!--<p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>-->
         </div>
         <div class="p4">
         	<h3>Pet4</h3>
-           		<p>Name <input type="text" name="p1name" value=""></p>
-        		<p>Breed <input type="text" name="p1breed" value=""></p>
-        		<p>Photo <input type="file" name="p1photo" value=""></p>
-        		<p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>
+           		<p>Name <input type="text" name="petName" value=""></p>
+        		<p>Breed <input type="text" name="breed" value=""></p>
+        		<p>Photo <input type="file" name="photo" value=""></p>
+        		<!--<p>Status:&nbsp;&nbsp; Home<input type="radio" name="home" value="Home" checked> Missing<input type="radio" name="missing" value="Missing"></p>-->
         </div>
 
         </div><br /><br />

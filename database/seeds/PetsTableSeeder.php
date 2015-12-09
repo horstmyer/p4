@@ -43,12 +43,12 @@ class PetsTableSeeder extends Seeder
         'status' => $faker->boolean($chanceOfGettingTrue = 50),
       ]);
 
-      $user_id = \App\User::where('name','=','Dolly Parton')->pluck('id');
+      $user_id = \App\User::where('name','=','Jamal')->pluck('id');
       DB::table('pets')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => $faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now'),
-        'petName' => 'Cuddles',
-        'breed' => 'Beagle',
+        'petName' => 'Buddy',
+        'breed' => 'Boxer',
         'photo' => $faker->url,
         'user_id' => $user_id,
         'status' => $faker->boolean($chanceOfGettingTrue = 50),
@@ -58,8 +58,8 @@ class PetsTableSeeder extends Seeder
       DB::table('pets')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => $faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now'),
-        'petName' => 'Jazmine',
-        'breed' => 'Beagle',
+        'petName' => 'Suzie',
+        'breed' => 'Golden',
         'photo' => $faker->url,
         'user_id' => $user_id,
         'status' => $faker->boolean($chanceOfGettingTrue = 50),
