@@ -21,7 +21,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 50px;
 	border-radius: 25px;
 	height: 150px;
 	clear: both;
@@ -76,7 +76,7 @@ body {
 
 .paws {
 	background-image: url(../images/paw.gif);
-	margin-top: 5px;
+	margin-top: 50px;
 	margin-right: 5px;
 	margin-bottom: 5px;
 	margin-left: 5px;
@@ -129,6 +129,9 @@ body {
 }
 .red {
 	color: #E812E7;
+}
+.white {
+	color: #fff;
 }
 .intro h1 {
 	text-align: center;

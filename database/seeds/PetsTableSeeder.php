@@ -10,6 +10,7 @@ class PetsTableSeeder extends Seeder
     public function run()
   {
       $faker = Faker\Factory::create();
+
       $user_id = \App\User::where('name','=','LaLa Mills')->pluck('id');
       DB::table('pets')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
@@ -75,5 +76,16 @@ class PetsTableSeeder extends Seeder
         'user_id' => $user_id,
         'status' => $faker->boolean($chanceOfGettingTrue = 50),
       ]);
+      $user_id = \App\User::where('name','=','Jamal')->pluck('id');
+      DB::table('pets')->insert([
+        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+        'updated_at' => $faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now'),
+        'petName' => 'Dew Drop',
+        'breed' => 'Poodle',
+        'photo' => 'http://www.pets4you.com/pages/kalchan/images/kalchan7-18-07.jpg',
+        'user_id' => $user_id,
+        'status' => $faker->boolean($chanceOfGettingTrue = 50),
+      ]);
+
     }
 }

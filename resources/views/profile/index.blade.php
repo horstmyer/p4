@@ -32,7 +32,7 @@
 
 @stop
 @section('buttons')
-  <h3>Add more pets <a href="profile/addpet">Here.</a></h3>
+  <h3>Add more pets <a href="profile/addpet"><img src="/images/here.png" width="100" height="40" alt=""/></a></h3>
 @stop
 @section('body')
 

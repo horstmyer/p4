@@ -16,7 +16,7 @@
     </p>
 
     <p>
-        <a href='/profile/delete/{{$pets->id}}'>Yes...</a>
+        <a href='/profile/delete/{{$pets->id}}'><img src="/images/delete.png" width="100" height="40" alt=""/></a>
     </p>
 </div>
 @stop
