@@ -13,6 +13,7 @@
       <form method="post" action="/profile/edit">
         <div class="p1">
           <input type='hidden' value='{{ csrf_token() }}' name='_token'>
+          <input type='hidden' value='{{ $pets->id }}' name='id'>
           <p>Name <input type="text" name="petName" value="{{ $pets->petName }}"></p>
           <p>Breed <input type="text" name="breed" value="{{ $pets->breed }}"></p>
           <img src='{{ $pets->photo }}' width="200px" height="200px">

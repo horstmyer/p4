@@ -45,19 +45,20 @@ public function postPet(Request $request) {
     {
         //return view('profile.index');
     }
-     public function getEdit($pets_id) {
-            $pets = \App\Pet::find($pets_id);
-            return view('profile.edit')->with('pets', $pets);
-            //echo "what is wrong?";
-        }
-     public function postEdit(Request $request) {
-            $pets = \App\Pet::find($request->id);
-            $pets->petName = $request->petName;
-            $pets->breed = $request->breed;
-            $pets->photo = $request->photo;
-            $pets->save();
-            return redirect('/profile');
-        }
+    public function getEdit($pets_id) {
+           $pets = \App\Pet::find($pets_id);
+           return view('profile.edit')->with('pets', $pets);
+           //echo "what is wrong?";
+       }
+    public function postEdit(Request $request) {
+           $pets = \App\Pet::find($request->id);
+           $pets->petName = $request->petName;
+           $pets->breed = $request->breed;
+           $pets->photo = $request->photo;
+           //$pets->user_id = \Auth::id();
+           $pets->save();
+           return redirect('/profile');
+       }
         public function getConfirmDelete($pets_id) {
            $pets = \App\Pet::find($pets_id);
            return view('profile.delete')->with('pets', $pets);
