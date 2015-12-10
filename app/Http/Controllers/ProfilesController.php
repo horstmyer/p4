@@ -33,8 +33,7 @@ class ProfilesController extends Controller
     }
      public function getEdit($pets_id) {
             $pets = \App\Pet::find($pets_id);
-            return view('profile.edit')
-                ->with('pets', $pets);
+            return view('profile.edit')->with('pets', $pets);
         }
      public function postEdit(Request $request) {
             $pets = \App\Pet::find($request->id);
@@ -51,7 +50,8 @@ class ProfilesController extends Controller
        public function getDoDelete($pets_id) {
               $pets = \App\Pet::find($pets_id);
               $pets->delete();
-              return redirect('profile');
+              \Session::flash('flash_message','Your Pet has been deleted.');
+              return redirect('/profile');
           }
     public function destroy($id)
     {
