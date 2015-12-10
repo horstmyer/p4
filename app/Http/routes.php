@@ -35,6 +35,17 @@ Route::post('/edit', 'ProfilesController@postEdit');
 Route::get('/logout', 'Auth\AuthController@getLogout');
 
 
+
+
+Route::get('/profile/edit/{id?}', 'ProfilesController@getEdit');
+
+Route::post('/profile/edit', 'ProfilesController@postEdit');
+
+
+
+
+
+
 // Process Missing
 //Route::post('/missing', 'MissingController@getIndex');
 

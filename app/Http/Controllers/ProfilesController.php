@@ -9,11 +9,6 @@ use App\Http\Controllers\Controller;
 
 class ProfilesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function getIndex()
     {
       //get the pets
@@ -26,23 +21,12 @@ class ProfilesController extends Controller
            return view('auth.register');
            //return 'sign up form';
        }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function postCreate()
     {
         return view('auth.register');
         //return 'sign up form';
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function postProfile(Request $request)
     {
 
@@ -52,46 +36,38 @@ class ProfilesController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function getProfile()
     {
         //return view('profile.index');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function getEdit()
-    {
-       return view ('profile.edit');
-    }
+     public function getEdit($pets_id) {
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function postEdit(Request $request, $id)
-    {
-        //return view('profile.index');
-    }
+            $pets = \App\Pet::find($pets_id);
+            return view('profile.edit')
+                ->with('pets', $pets);
+        }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+     public function postEdit(Request $request) {
+            $pets = \App\Pet::find($request->id);
+            $pets->petName = $request->petName;
+            $pets->breed = $request->breed;
+            $pets->photo = $request->photo;
+            $pets->save();
+            return redirect('/books/edit/'.$request->id);
+        }
+        public function getConfirmDelete($pets_id) {
+           $pets = \App\Pet::find($pets_id);
+           return view('profile.delete')->with('pets', $pets);
+       }
+
+       public function getDoDelete($pets_id) {
+              $pets = \App\Pet::find($pets_id);
+              $pets->delete();
+              return redirect('profile');
+          }
+
+
     public function destroy($id)
     {
         //
