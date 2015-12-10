@@ -12,15 +12,26 @@ class ProfilesController extends Controller
       return view('profile.index')->with('pets', $pets);
       //return 'here is the profile';
     }
-    public function getCreate()
+    public function getAddPet()
        {
-           return view('auth.register');
-           //return 'sign up form';
+           $pet = new \App\Pet();
+           return view('profile.addpet');
        }
-    public function postCreate()
-    {
-        return view('auth.register');
-        //return 'sign up form';
+    public function postPet(Request $request) {
+      $this->validate(
+           $request,
+           [
+               'petName' => 'required|min:5',
+               'breed' => 'required',
+             ]
+       );
+      $pets = new \App\Pet();
+      $pets->petName = $request->petName;
+      $pets->breed = $request->breed;
+      $pets->photo = $request->photo;
+      $pets->save();
+      //return redirect('/profile');
+      echo 'posting new pet';
     }
     public function postProfile(Request $request)
     {
@@ -34,14 +45,15 @@ class ProfilesController extends Controller
      public function getEdit($pets_id) {
             $pets = \App\Pet::find($pets_id);
             return view('profile.edit')->with('pets', $pets);
+            //echo "what is wrong?";
         }
      public function postEdit(Request $request) {
-            $pets = \App\Pet::find($request->id);
+            $pets = \App\Pet::find($pets_id);
             $pets->petName = $request->petName;
             $pets->breed = $request->breed;
             $pets->photo = $request->photo;
             $pets->save();
-            return redirect('/profile'.$request->id);
+            return redirect('/profile');
         }
         public function getConfirmDelete($pets_id) {
            $pets = \App\Pet::find($pets_id);

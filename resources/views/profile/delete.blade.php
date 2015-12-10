@@ -1,12 +1,14 @@
 @extends('layouts.master')
 
 @section('title')
-    Delete Pet
+    Delete Your Pet
 @stop
 
+@section('head')
+@stop
 
 @section('intro')
-
+<div class="output">
     <h1>Delete Pet</h1>
 
     <p>
@@ -16,5 +18,8 @@
     <p>
         <a href='/profile/delete/{{$pets->id}}'>Yes...</a>
     </p>
+</div>
+@stop
+@section('body')
 
 @stop

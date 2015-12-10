@@ -28,8 +28,8 @@ Route::get('/profile', 'ProfilesController@getIndex');
 Route::post('/profile', 'ProfilesController@postProfile');
 
 // Show Edit Profile
-Route::get('/edit', 'ProfilesController@getEdit');
-Route::post('/edit', 'ProfilesController@postEdit');
+//Route::get('/edit', 'ProfilesController@getEdit');
+//Route::post('/edit', 'ProfilesController@postEdit');
 
 // Process logout
 Route::get('/logout', 'Auth\AuthController@getLogout');
@@ -46,7 +46,10 @@ Route::get('/profile/confirm-delete/{id?}', 'ProfilesController@getConfirmDelete
 //process delete pet
 Route::get('/profile/delete/{id?}', 'ProfilesController@getDoDelete');
 
-
+//add a pet
+Route::get('profile/addpet', 'ProfilesController@getAddPet');
+//process a pet
+Route::post('profile/addpet', 'ProfilesController@postPet');
 
 
 

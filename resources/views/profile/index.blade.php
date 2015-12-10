@@ -6,20 +6,14 @@
 @stop
 
 
-{{--
-This `head` section will be yielded right before the closing </head> tag.
-Use it to add specific things that *this* View needs in the head,
-such as a page specific styesheets.
---}}
 @section('head')
 @stop
 
 
 @section('intro')
 <div class="output">
-    <h2>Your Pets</h2>
     <div>
-
+       <h2>Hi {{ $user->name }}! Here are you registered Pets: </h2>
     </div>
     @if(sizeof($pets) == 0)
       No pets
@@ -37,12 +31,9 @@ such as a page specific styesheets.
 </div>
 
 @stop
-
-{{--
-This `body` section will be yielded right before the closing </body> tag.
-Use it to add specific things that *this* View needs at the end of the body,
-such as a page specific JavaScript files.
---}}
+@section('buttons')
+  <h3>Add more pets <a href="profile/addpet">Here.</a></h3>
+@stop
 @section('body')
 
 @stop
