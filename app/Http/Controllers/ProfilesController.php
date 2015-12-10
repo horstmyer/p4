@@ -1,12 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 class ProfilesController extends Controller
 {
     public function getIndex()
@@ -26,28 +22,20 @@ class ProfilesController extends Controller
         return view('auth.register');
         //return 'sign up form';
     }
-
     public function postProfile(Request $request)
     {
-
       //  \Session::flash('flash_message', 'Welcome!');
-
       //return view('profile.index');
-
     }
-
     public function getProfile()
     {
         //return view('profile.index');
     }
-
      public function getEdit($pets_id) {
-
             $pets = \App\Pet::find($pets_id);
             return view('profile.edit')
                 ->with('pets', $pets);
         }
-
      public function postEdit(Request $request) {
             $pets = \App\Pet::find($request->id);
             $pets->petName = $request->petName;
@@ -60,14 +48,11 @@ class ProfilesController extends Controller
            $pets = \App\Pet::find($pets_id);
            return view('profile.delete')->with('pets', $pets);
        }
-
        public function getDoDelete($pets_id) {
               $pets = \App\Pet::find($pets_id);
               $pets->delete();
               return redirect('profile');
           }
-
-
     public function destroy($id)
     {
         //
