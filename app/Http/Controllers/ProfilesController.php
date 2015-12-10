@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+
 class ProfilesController extends Controller
 {
     public function getIndex()
@@ -17,7 +18,8 @@ class ProfilesController extends Controller
            $pet = new \App\Pet();
            return view('profile.addpet');
        }
-    public function postPet(Request $request) {
+
+public function postPet(Request $request) {
       $this->validate(
            $request,
            [
@@ -29,9 +31,10 @@ class ProfilesController extends Controller
       $pets->petName = $request->petName;
       $pets->breed = $request->breed;
       $pets->photo = $request->photo;
+      $pets->user_id = \Auth::id();
       $pets->save();
-      //return redirect('/profile');
-      echo 'posting new pet';
+      return redirect('/profile');
+      //echo 'posting new pet';
     }
     public function postProfile(Request $request)
     {
@@ -48,7 +51,7 @@ class ProfilesController extends Controller
             //echo "what is wrong?";
         }
      public function postEdit(Request $request) {
-            $pets = \App\Pet::find($pets_id);
+            $pets = \App\Pet::find($request->id);
             $pets->petName = $request->petName;
             $pets->breed = $request->breed;
             $pets->photo = $request->photo;

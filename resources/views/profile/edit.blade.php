@@ -4,17 +4,8 @@
     Edit your Pet
 @stop
 
-
-{{--
-This `head` section will be yielded right before the closing </head> tag.
-Use it to add specific things that *this* View needs in the head,
-such as a page specific styesheets.
---}}
 @section('head')
 @stop
-
-
-
 
 @section('intro')
 <div class="output">
@@ -30,5 +21,4 @@ such as a page specific styesheets.
         </div>
       </form>
 </div>
-
 @stop
