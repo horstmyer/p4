@@ -36,13 +36,14 @@ Route::get('/logout', 'Auth\AuthController@getLogout');
 
 
 
-
+//edit pet
 Route::get('/profile/edit/{id?}', 'ProfilesController@getEdit');
-
+//process edit pet
 Route::post('/profile/edit', 'ProfilesController@postEdit');
 
+//delete pet
 Route::get('/profile/confirm-delete/{id?}', 'ProfilesController@getConfirmDelete');
-
+//process delete pet
 Route::get('/profile/delete/{id?}', 'ProfilesController@getDoDelete');
 
 
