@@ -15,6 +15,18 @@
         <section>
 					@yield('login')
 				</section>
+				<div class="nav">
+        	@if(Auth::check())
+						<p><a href="/"><img src="/images/bonenav.png" width="100" height="40" alt=""/></a></p>
+						<p><a href="/profile"><img src="/images/profile.png" width="100" height="40" alt=""/></a></p>
+						<p><a href="/profile/addpet"><img src="/images/addpet.png" width="100" height="40" alt=""/></a></p>
+						<p><a href="/logout"><img src="/images/logout.png" width="100" height="40" alt=""/></a></p>
+            @else
+						<p><a href="/"><img src="/images/bonenav.png" width="100" height="40" alt=""/></a></p>
+						<p><a href="/register"><img src="/images/register.png" width="100" height="40" alt=""/></a></p>
+            @endif
+
+    </div>
   	</div>
     <!-- Begin Paws -->
     <div class="paws">
