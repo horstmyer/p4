@@ -54,7 +54,7 @@ class ProfilesController extends Controller
             $pets->breed = $request->breed;
             $pets->photo = $request->photo;
             $pets->save();
-            return redirect('/books/edit/'.$request->id);
+            return redirect('/profile'.$request->id);
         }
         public function getConfirmDelete($pets_id) {
            $pets = \App\Pet::find($pets_id);

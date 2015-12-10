@@ -41,6 +41,9 @@ Route::get('/profile/edit/{id?}', 'ProfilesController@getEdit');
 
 Route::post('/profile/edit', 'ProfilesController@postEdit');
 
+Route::get('/profile/confirm-delete/{id?}', 'ProfilesController@getConfirmDelete');
+
+Route::get('/profile/delete/{id?}', 'ProfilesController@getDoDelete');
 
 
 
