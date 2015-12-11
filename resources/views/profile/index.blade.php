@@ -6,14 +6,17 @@
 @stop
 
 
-@section('head')
+@section('login')
+<div class="colr">
+<h2>Hi {{ $user->name }}! </h2>
+</div>
 @stop
 
 
 @section('intro')
 <div class="output">
     <div>
-       <h2>Hi {{ $user->name }}! Here are you registered Pets: </h2>
+       <h2>Here is your profile: </h2>
     </div>
     @if(sizeof($pets) == 0)
       No pets
