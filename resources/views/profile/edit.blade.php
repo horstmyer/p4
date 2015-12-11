@@ -17,7 +17,7 @@
           <p>Name <input type="text" name="petName" value="{{ $pets->petName }}"></p>
           <p>Breed <input type="text" name="breed" value="{{ $pets->breed }}"></p>
           <img src='{{ $pets->photo }}' width="200px" height="200px">
-          <p>Photo <input type="file" name="photo" value="{{ $pets->photo }}"></p>
+          <p>Photo URL <input type="url" name="photo" value="{{ $pets->photo }}"></p>
           <button type="submit">Edit Pet</button>
         </div>
       </form>

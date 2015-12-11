@@ -1,3 +1,4 @@
+
 @extends('layouts.master')
 
 
@@ -16,7 +17,7 @@
 			<div class="regform">
     			<p>Pet Name <input type="text" name="petName" value=""></p>
       			<p>Breed <input type="text" name="breed"></p>
-      			<p>Photo <input type="file" name="photo" value=""></p>
+      			<p>Photo URL <input type="url" name="photo" value=""></p>
       			@if(count($errors) > 0)
 					<ul class='errors'>
 					@foreach ($errors->all() as $error)

@@ -3,7 +3,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 class ProfilesController extends Controller
 {
     public function getIndex()
@@ -18,15 +17,14 @@ class ProfilesController extends Controller
            $pet = new \App\Pet();
            return view('profile.addpet');
        }
-
-public function postPet(Request $request) {
-      $this->validate(
+       public function postPet(Request $request) {
+         $this->validate(
            $request,
            [
                'petName' => 'required|min:5',
                'breed' => 'required',
              ]
-       );
+           );
       $pets = new \App\Pet();
       $pets->petName = $request->petName;
       $pets->breed = $request->breed;
