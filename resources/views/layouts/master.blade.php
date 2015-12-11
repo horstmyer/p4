@@ -16,6 +16,7 @@
 					@yield('login')
 				</section>
 				<div class="nav">
+								<?php if(!isset($pets)) $pets = array(); ?>
         				@if(Auth::check() && (sizeof($pets) <= 3))
 								<p><a href="/"><img src="/images/bonenav.png" width="100" height="40" alt=""/></a></p>
 								<p><a href="/profile"><img src="/images/profile.png" width="100" height="40" alt=""/></a></p>
