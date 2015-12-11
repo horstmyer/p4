@@ -16,7 +16,8 @@ class IndexController extends Controller
      */
     public function getIndex()
     {
-        return view('index');
+        $pets = \App\Pet::where('user_id', '=', \Auth::id())->orderBy('id', 'DESC')->get();
+        return view('index')->with('pets', $pets);
     }
 
     /**

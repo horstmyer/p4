@@ -21,28 +21,60 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 10px;
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 	border-radius: 25px;
-	height: 150px;
+	height: 130px;
 	clear: both;
-	padding-top: 15px;
-	padding-right: 15px;
-	padding-bottom: 15px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+#header a img {
+	float: left;
+	margin-bottom: 20px;
+}
+#nav {
+	width: 500px;
+	margin-left: auto;
+	margin-right: 100px;
+	float: right;
+
+}
+.colr {
+	float: right;
+	border-radius: 25px;
+	background-color: #2B23CA;
 	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 0px;
 }
 
-.nav ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
+.colr h2 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	color: #FFFFFF;
+	font-family: fantasy, Pristina;
+	font-style: normal;
+	font-weight: 400;
+}
+.coll .imgr {
+	float: right;
+	margin-left: 10px;
+	margin-right: 0px;
 }
 
-.nav ul li {
-    display:inline;
-    background-color:#2B23CA;
-    padding:5px;
-    margin-right:5px;
-		color: #fff;
+.paws {
+	background-image: url(../images/paw.gif);
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	min-height: 25px;
+	background-repeat: repeat-x;
+	border-spacing: 30px 0px;
+	clear: both;
 }
 
 
@@ -56,90 +88,50 @@ body {
 	padding-right: 25px;
 	padding-bottom: 10px;
 	color: #FFFFFF;
-	margin-bottom: 30px;
-	margin-top: 10px;
+	margin-bottom: 15px;
+	margin-top: 15px;
 	padding-top: 10px;
 }
-.colr h2 {
+.intro h1 {
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	color: #FFFFFF;
-	font-family: fantasy, Pristina;
-	font-style: normal;
-	font-weight: 400;
-}
-#header a img {
-	float: left;
-	margin-bottom: 20px;
-}
 
-.paws {
-	background-image: url(../images/paw.gif);
-	margin-top: 50px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	margin-left: 5px;
-	min-height: 25px;
-	background-repeat: repeat-x;
-	border-spacing: 30px 0px;
-	clear: both;
-}
-.coll {
-	width: 750px;
-	float: left;
-	margin-top: 20px;
-	margin-bottom: 15px;
-	clear: both;
-	text-align: left;
-}
-.colr {
-	float: right;
-	border-radius: 25px;
-	background-color: #2B23CA;
-	padding-left: 15px;
-	padding-bottom: 5px;
-	padding-right: 15px;
-	padding-top: 0px;
-}
-.colr form {
-	margin-left: auto;
-	margin-right: auto;
-
-}
-
-
-
-
-#footer {
-	margin-left: auto;
-	margin-right: auto;
-}
-#footer p {
-	text-align: center;
-}
-.coll  img {
-	float: left;
-	margin-right: 15px;
 }
 .intro p {
 	color: #FFFFFF;
 	font-size: large;
 	text-align: center;
 }
-.red {
-	color: #E812E7;
+.coll {
+	width: 1100px;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	clear: both;
+	font-size: large;
 }
-.white {
-	color: #fff;
+section .coll p {
+	text-align: left;
 }
-.intro h1 {
-	text-align: center;
+
+.colr form {
+	margin-left: auto;
+	margin-right: auto;
 
 }
-.intro .right {
-	text-align: right;
-	font-size: x-large;
+.coll  img {
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+.colreg {
+	float: right;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	margin-top: 40px;
+	width: 160px;
+	height: 160px;
 }
 .missing {
 	margin-left: auto;
@@ -155,39 +147,22 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
-#header .signin {
-	float: right;
-	padding-top: 5px;
-}
-.colreg {
-	float: right;
-	padding-left: 5px;
-	padding-bottom: 5px;
-	padding-right: 5px;
-	padding-top: 5px;
-	margin-top: 20px;
-	width: 160px;
-	height: 160px;
-	background-repeat: no-repeat;
-	background-image: url(../images/here.gif);
-}
-tr td img {
+
+
+
+
+#footer {
 	margin-left: auto;
 	margin-right: auto;
+}
+#footer p {
 	text-align: center;
 }
-#header .colr form {
-	color: #FFFFFF;
+.red {
+	color: #E812E7;
 }
-.regform   {
-	width: 500px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #37ad3d;
-	padding-left: 10px;
-	padding-top: 10px;
-	padding-right: 10px;
-	padding-bottom: 10px;
+.white {
+	color: #fff;
 }
 .p1 {
 	width: 250px;
@@ -219,13 +194,4 @@ h3  {
 	text-align: center;
 }
 div form button {
-}
-#header .nav p {
-	background-image: url(../images/bonenav.png);
-	background-repeat: no-repeat;
-	float: left;
-	width: 100px;
-	height: 0px;
-	clear: right;
-
 }
