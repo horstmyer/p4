@@ -12,9 +12,15 @@
 	<!-- Begin Header -->
 	<div id="header">
    	  	<a href="index.php"><img src="/images/MSCCDogsLogo.gif" width="454" height="126" alt=""/></a>
-        <section>
-					@yield('login')
-				</section>
+				<section>
+					@if(Auth::check())
+					<div class="colr">
+					<h2>Hi {{ $user->name }}! </h2>
+					</div>
+					@else
+						@yield('login')
+					@endif
+	 			</section>
 				<div id="nav">
 								<?php if(!isset($pets)) $pets = array(); ?>
         				@if(Auth::check() && (sizeof($pets) <= 3))
@@ -36,14 +42,14 @@
     <!-- Begin Paws -->
     <div class="paws">
     </div>
-	<!-- Begin Intro -->
+		<!-- Begin Intro -->
     <div class="intro">
     	<section>
 				@yield('intro')
 			</section>
 	</div>
     <!-- Begin Paws -->
-	<div class="paws">
+		<div class="paws">
     </div>
     <!-- Begin Missing Pets -->
     <div class="missing">
