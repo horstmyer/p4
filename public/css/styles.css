@@ -142,6 +142,8 @@ section .coll p {
 	border-radius: 25px;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	color: #ffffff;
+
 }
 .missing table {
 	margin-left: auto;
