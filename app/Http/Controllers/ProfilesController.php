@@ -21,7 +21,7 @@ class ProfilesController extends Controller
          $this->validate(
            $request,
            [
-               'petName' => 'required|min:5',
+               'petName' => 'required',
                'breed' => 'required',
              ]
            );

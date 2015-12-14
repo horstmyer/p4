@@ -146,8 +146,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
-
         'App\Providers\ComposerServiceProvider',
+        'Vsmoraes\Pdf\PdfServiceProvider'
     ],
 
     /*
@@ -197,6 +197,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'PDF' => 'Vsmoraes\Pdf\PdfFacade',
     ],
+
 
 ];

@@ -17,7 +17,6 @@
 <div class="output">
     <div>
        <h2>Here is your profile: </h2>
-
     </div>
     @if(sizeof($pets) == 0)
       No pets
@@ -28,8 +27,8 @@
             <p><img src='{{ $pet->photo }}' width="200px" height="200px"></p>
           <p>{{ $pet->breed }}</p>
           <a href='/profile/edit/{{$pet->id}}'>Edit</a> |
-              <a href='/profile/confirm-delete/{{$pet->id}}'>Delete</a><br>
-      </div>
+          <a href='/profile/confirm-delete/{{$pet->id}}'>Delete</a><br> ||
+          <a href='/missing/{{$pet->id}}'>MISSING</a></div>
      @endforeach
    @endif
 </div>

@@ -56,6 +56,16 @@ class UsersTableSeeder extends Seeder
     DB::table('users')->insert([
        'created_at' => Carbon\Carbon::now()->toDateTimeString(),
        'updated_at' => $faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now'),
+       'email' => 'doodledog1@gmail.com',
+       'password' => \Hash::make('helloworld'),
+       'name' => 'Mike Smith',
+       'address' => $faker->address,
+       'phone' => $faker->phoneNumber,
+   ]);
+
+    DB::table('users')->insert([
+       'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+       'updated_at' => $faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now'),
        'email' => $faker->email,
        'password' => \Hash::make('helloworld'),
        'name' => 'Dolly Parton',
