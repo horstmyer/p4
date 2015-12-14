@@ -35,7 +35,11 @@
 </div>
 @stop
 @section('buttons')
-
+<div>@if(sizeof($pets) <= 3)
+  <h3>Add more pets <a href="profile/addpet"><img src="/images/here.png" width="100" height="40" alt=""/></a><br /><br />Limit 4 pets.</h3>
+@else
+  <h3>You have reached the maximum number of pets!</h3>
+@endif</div>
 @stop
 @section('body')
 

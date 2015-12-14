@@ -54,18 +54,7 @@
     <div class="missing">
 			 <section>
 				 @yield('buttons')
-				 @if($pets->count() == 0)
-					 No pets
-				 @else
-					 @foreach($pets as $pet)
-					 <div class="p1">
-						 <h2>MISSING</h2>
-						 <h3>{{ $pet->petName }}</h3>
-								 <p><img src='{{ $pet->photo }}' width="200px" height="200px"></p>
-							 <p>{{ $pet->breed }}</p>
-					 </div>
-					@endforeach
-				 @endif
+				 
 			 </section>
     </div>
     <!-- Begin Paws -->
