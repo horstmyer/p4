@@ -16,6 +16,8 @@ class IndexController extends Controller
      */
      public function getIndex()
        {
-           $pets = \App\Pet::where('user_id', '=', \Auth::id())->orderBy('id', 'DESC')->get();
+	//You want it to get the pets with a certain status, so the query changes like this
+	$pets = \App\Pet::where('status', '=', 1)->orderBy('id', 'DESC')->get();
+
            return view('index')->with('pets', $pets);
        }}

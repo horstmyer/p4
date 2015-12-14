@@ -35,7 +35,6 @@
 								@else
 								<p><a href="/"><img src="/images/bonenav.png" width="100" height="40" alt=""/></a></p>
 								<p><a href="/register"><img src="/images/register.png" width="100" height="40" alt=""/></a></p>
-								<p><a href="/logout"><img src="/images/logout.png" width="100" height="40" alt=""/></a></p>
             		@endif
     			</div>
   	</div>
@@ -53,17 +52,21 @@
     </div>
     <!-- Begin Missing Pets -->
     <div class="missing">
-			 <section>@yield('buttons')</section>
-    	<!-- Phase II display of missing critters
-    	<table width="800" border="1">
-  		<tbody>
-    		<tr>
-      			<td><h3>Miss Miya</h3><img src="images/miya.gif" width="200" height="184" alt=""/></td>
-      			<td><h3>Miss Miya</h3><img src="images/miya.gif" width="200" height="184" alt=""/></td>
-      			<td><h3>Miss Miya</h3><img src="images/miya.gif" width="200" height="184" alt=""/></td>
-    		</tr>
-  		</tbody>
-		</table> -->
+			 <section>
+				 @yield('buttons')
+				 @if($pets->count() == 0)
+					 No pets
+				 @else
+					 @foreach($pets as $pet)
+					 <div class="p1">
+						 <h2>MISSING</h2>
+						 <h3>{{ $pet->petName }}</h3>
+								 <p><img src='{{ $pet->photo }}' width="200px" height="200px"></p>
+							 <p>{{ $pet->breed }}</p>
+					 </div>
+					@endforeach
+				 @endif
+			 </section>
     </div>
     <!-- Begin Paws -->
 	<div class="paws"></div>

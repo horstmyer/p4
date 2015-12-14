@@ -27,3 +27,8 @@
     <p>Thank you and check back often for future enhancements!</p>
       </div>
 @stop
+
+@section ('buttons')
+
+
+</section>
