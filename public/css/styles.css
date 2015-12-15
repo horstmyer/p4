@@ -14,6 +14,14 @@ body {
 	border-radius: 25px;
 }
 
+a:link {
+	color: #ffffff;
+}
+a:visited {
+	color: hotpink;
+}
+
+
 
 #header {
 	background-color: #FFFFFF;
@@ -48,6 +56,10 @@ body {
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 0px;
+}
+
+.colr p {
+	color: #ffffff;
 }
 
 .colr h2 {
@@ -171,6 +183,15 @@ section .coll p {
 	background-color: #000000;
 }
 
+.p1 p {
+	color: #ffffff;
+}
+.p1 a:link {
+	color: #ffffff;
+}
+.p1 a:visited {
+	color: hotpink;
+}
 
 .misspet {
 	width: 250px;

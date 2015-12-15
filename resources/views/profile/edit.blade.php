@@ -10,6 +10,9 @@
 @section('intro')
 <div class="output">
     <h2>Edit Your Pet</h2>
+    <p>If you prefer to email <script type="text/javascript">
+  document.write("<a href=\"mail" + "to:" + new Array("doodledog1","gmail.com").join("@") + "\">" + "MSCC Pets" + "</" + "a>");
+    </script> a photo, we can upload it for you!</p>
       <form method="post" action="/profile/edit">
         <div class="p1">
           <input type='hidden' value='{{ csrf_token() }}' name='_token'>
@@ -18,6 +21,7 @@
           <p>Breed <input type="text" name="breed" value="{{ $pets->breed }}"></p>
           <img src='{{ $pets->photo }}' width="200px" height="200px">
           <p>Photo URL <input type="url" name="photo" value="{{ $pets->photo }}"></p>
+
           <button type="submit">Edit Pet</button>
         </div>
       </form>

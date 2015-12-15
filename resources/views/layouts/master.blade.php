@@ -54,7 +54,7 @@
     <div class="missing">
 			 <section>
 				 @yield('buttons')
-				 
+
 			 </section>
     </div>
     <!-- Begin Paws -->

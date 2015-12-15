@@ -11,7 +11,8 @@
     {!! csrf_field() !!}
     <p>Email <input type="email" name="email" ><br />
       Password <input type="password" name="password" id="password" size="15px">
-      <input type="checkbox" name="remember"> Remember Me<button type="submit">Login</button></p>
+      Remember Me<input type="checkbox" name="remember">
+      <button type="submit">Login</button></p>
     </form>
 </div>
 @stop

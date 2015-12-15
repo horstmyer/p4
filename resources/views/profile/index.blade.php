@@ -24,11 +24,12 @@
       @foreach($pets as $pet)
       <div class="p1">
         <h3>{{ $pet->petName }}</h3>
-            <p><img src='{{ $pet->photo }}' width="200px" height="200px"></p>
+            <p><img src='{{ $pet->photo }}' width="200px" height="200px">
           <p>{{ $pet->breed }}</p>
-          <a href='/profile/edit/{{$pet->id}}'>Edit</a> |
-          <a href='/profile/confirm-delete/{{$pet->id}}'>Delete</a><br> ||
-          <a href='/missing/{{$pet->id}}'>MISSING</a></div>
+          <p><a href='/profile/edit/{{$pet->id}}'>Edit</a> |
+          <a href='/profile/confirm-delete/{{$pet->id}}'>Delete</a><br> </p>
+          <p/><a href='/missing{{$pet->id}}' target='_blank'>Missing</a></p>
+        </div>
      @endforeach
    @endif
 </div>
