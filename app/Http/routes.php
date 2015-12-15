@@ -4,41 +4,40 @@
 // home page, show login
 Route::get('/', 'IndexController@getIndex');
 
-// Process login form
-Route::post('/login', 'Auth\AuthController@postLogin');
-
 // Show Signup/Register
 Route::get('/register', 'Auth\AuthController@getRegister');
 
 // Process Signup/Register
 Route::post('/register', 'Auth\AuthController@postRegister');
 
-// Show Profile
-Route::get('/profile', 'ProfilesController@getIndex');
-Route::post('/profile', 'ProfilesController@postProfile');
-
-// Process logout
-Route::get('/logout', 'Auth\AuthController@getLogout');
-
-//edit pet
-Route::get('/profile/edit/{id?}', 'ProfilesController@getEdit');
-//process edit pet
-Route::post('/profile/edit', 'ProfilesController@postEdit');
-
-//delete pet
-Route::get('/profile/confirm-delete/{id?}', 'ProfilesController@getConfirmDelete');
-//process delete pet
-Route::get('/profile/delete/{id?}', 'ProfilesController@getDoDelete');
-
-//add a pet
-Route::get('profile/addpet', 'ProfilesController@getAddPet');
-//process a pet
-Route::post('profile/addpet', 'ProfilesController@postPet');
+// Process login form
+Route::post('/login', 'Auth\AuthController@postLogin');
 
 
+    // Show Profile
+    Route::get('/profile', 'ProfilesController@getIndex');
+    Route::post('/profile', 'ProfilesController@postProfile');
 
-//  Missing
-Route::get('/missing/{id?}', 'MissingController@flyer');
+    // Process logout
+    Route::get('/logout', 'Auth\AuthController@getLogout');
+
+    //edit pet
+    Route::get('/profile/edit/{id?}', 'ProfilesController@getEdit');
+    //process edit pet
+    Route::post('/profile/edit', 'ProfilesController@postEdit');
+
+    //delete pet
+    Route::get('/profile/confirm-delete/{id?}', 'ProfilesController@getConfirmDelete');
+    //process delete pet
+    Route::get('/profile/delete/{id?}', 'ProfilesController@getDoDelete');
+
+    //add a pet
+    Route::get('profile/addpet', 'ProfilesController@getAddPet');
+    //process a pet
+    Route::post('profile/addpet', 'ProfilesController@postPet');
+
+    //  Missing
+    Route::get('/missing/{id?}', 'MissingController@flyer');
 
 
 Route::get('/confirm-login-worked', function() {
@@ -53,10 +52,17 @@ Route::get('/confirm-login-worked', function() {
     return;
 });
 
+if(App::environment('local')) {
+    Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+    Route::get('/drop', function() {
+        DB::statement('DROP database msccpets');
+        DB::statement('CREATE database msccpets');
+        return 'Dropped msccpets; created msccpets.';
+    });
+};
 
 
 
-Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 Route::get('/debug', function() {
 
     echo '<pre>';
