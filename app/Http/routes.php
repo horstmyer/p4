@@ -38,7 +38,7 @@ Route::post('profile/addpet', 'ProfilesController@postPet');
 
 
 //  Missing
-//Route::post('/missing/{id?}', 'MissingController@flyer');
+Route::get('/missing/{id?}', 'MissingController@flyer');
 
 
 Route::get('/confirm-login-worked', function() {

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Vsmoraes\Pdf\Pdf;
+use PDF;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -20,8 +20,8 @@ class MissingController extends Controller
   {
     $html = view('pdfs.missing')->render();
 
-    return $this->pdf
-        ->load($html)
-        ->show();
+return $this->pdf
+    ->load($html)
+    ->show();
   }
 }
