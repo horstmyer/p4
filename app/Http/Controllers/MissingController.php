@@ -12,8 +12,6 @@ class MissingController extends Controller
 ​
     public function flyer()
     {
-​
-
         $html = view('pdfs.missing')->render();
 ​
         return PDF::load($html)->show();
