@@ -34,15 +34,7 @@ class ProfilesController extends Controller
       return redirect('/profile');
       //echo 'posting new pet';
     }
-    public function postProfile(Request $request)
-    {
-      //  \Session::flash('flash_message', 'Welcome!');
-      //return view('profile.index');
-    }
-    public function getProfile()
-    {
-        //return view('profile.index');
-    }
+
     public function getEdit($pets_id) {
            $pets = \App\Pet::find($pets_id);
            return view('profile.edit')->with('pets', $pets);
@@ -67,8 +59,5 @@ class ProfilesController extends Controller
               \Session::flash('flash_message','Your Pet has been deleted.');
               return redirect('/profile');
           }
-    public function destroy($id)
-    {
-        //
-    }
+  
 }
