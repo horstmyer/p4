@@ -17,7 +17,8 @@
 @section('intro')
 <div class="output">
     <div>
-       <h2>Here is your profile: </h2>
+       <h3>If your pet is missing, please use the "Missing" link below the pet.</h3>
+       <h3>Print the flyer, add where and when your pet went missing and distribute.</h3>
     </div>
     @if(sizeof($pets) == 0)
     <h3>Add your pet below!</h3>
