@@ -1,3 +1,4 @@
+
 @extends('layouts.master')
 
 
@@ -28,7 +29,7 @@
           <p>{{ $pet->breed }}</p>
           <p><a href='/profile/edit/{{$pet->id}}'>Edit</a> |
           <a href='/profile/confirm-delete/{{$pet->id}}'>Delete</a><br> </p>
-          <p/><a href='/missing{{$pet->id}}' target='_blank'>Missing</a></p>
+          <p/><a href='/missing/{{ $pet->id }}' target='_blank'>Missing</a></p>
         </div>
      @endforeach
    @endif

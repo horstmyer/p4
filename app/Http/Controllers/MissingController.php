@@ -21,7 +21,7 @@ class MissingController extends Controller
 
         // Generate the view, passing it `pet` and `user`
         $html = view('pdfs.missing')
-            ->with('pet',$pet)
+            ->with('pet', $pet)
             ->with('user', \Auth::user())
             ->render();
 
