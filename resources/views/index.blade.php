@@ -48,5 +48,3 @@
 @endif
 </div>
 @stop
-
-</section>
