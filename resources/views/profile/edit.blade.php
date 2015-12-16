@@ -21,8 +21,7 @@
           <p>Breed <input type="text" name="breed" value="{{ $pets->breed }}"></p>
           <img src='{{ $pets->photo }}' width="200px" height="200px">
           <p>Photo URL <input type="url" name="photo" value="{{ $pets->photo }}"></p>
-
-          <button type="submit">Edit Pet</button>
+          <button type="submit"><img src="/images/edit.png" width="100" height="40" alt="Edit"/></button>
         </div>
       </form>
 </div>
