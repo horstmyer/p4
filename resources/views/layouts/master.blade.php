@@ -16,7 +16,7 @@
 @endif
 	<!-- Begin Header -->
 	<div id="header">
-   	  	<a href="index.php"><img src="/images/MSCCDogsLogo.gif" width="454" height="126" alt=""/></a>
+   	  	<a href="index.php"><img src="/images/MSCCDogsLogo.gif" width="454" height="126" alt="MSCC Logo"/></a>
 				<section>
 					@if(Auth::check())
 					<div class="colr">
@@ -29,17 +29,17 @@
 				<div id="nav">
 								<?php if(!isset($pets)) $pets = array(); ?>
         				@if(Auth::check() && (sizeof($pets) <= 3))
-								<p><a href="/"><img src="/images/bonenav.png" width="100" height="40" alt=""/></a></p>
-								<p><a href="/profile"><img src="/images/profile.png" width="100" height="40" alt=""/></a></p>
-								<p><a href="/profile/addpet"><img src="/images/addpet.png" width="100" height="40" alt=""/></a></p>
-								<p><a href="/logout"><img src="/images/logout.png" width="100" height="40" alt=""/></a></p>
+								<p><a href="/"><img src="/images/bonenav.png" width="100" height="40" alt="Home"/></a></p>
+								<p><a href="/profile"><img src="/images/profile.png" width="100" height="40" alt="Profile"/></a></p>
+								<p><a href="/profile/addpet"><img src="/images/addpet.png" width="100" height="40" alt="Add Pet"/></a></p>
+								<p><a href="/logout"><img src="/images/logout.png" width="100" height="40" alt="Logout"/></a></p>
 								@elseif(Auth::check() && (sizeof($pets) >= 4))
-								<p><a href="/"><img src="/images/bonenav.png" width="100" height="40" alt=""/></a></p>
-								<p><a href="/profile"><img src="/images/profile.png" width="100" height="40" alt=""/></a></p>
-								<p><a href="/logout"><img src="/images/logout.png" width="100" height="40" alt=""/></a></p>
+								<p><a href="/"><img src="/images/bonenav.png" width="100" height="40" alt="Home"/></a></p>
+								<p><a href="/profile"><img src="/images/profile.png" width="100" height="40" alt="Profile"/></a></p>
+								<p><a href="/logout"><img src="/images/logout.png" width="100" height="40" alt="Logout"/></a></p>
 								@else
-								<p><a href="/"><img src="/images/bonenav.png" width="100" height="40" alt=""/></a></p>
-								<p><a href="/register"><img src="/images/register.png" width="100" height="40" alt=""/></a></p>
+								<p><a href="/"><img src="/images/bonenav.png" width="100" height="40" alt="Home"/></a></p>
+								<p><a href="/register"><img src="/images/register.png" width="100" height="40" alt="Register"/></a></p>
             		@endif
     			</div>
   	</div>

@@ -12,7 +12,7 @@ such as a page specific styesheets.
 
 @section('login')
 <div class="colr">
-  <h2><img src="images/paws.gif" width="25" height="22" alt=""/>Sign In<img src="images/paws.gif" width="25" height="22" alt=""/></h2>
+  <h2><img src="images/paws.gif" width="25" height="22" alt="Dog Paws"/>Sign In<img src="images/paws.gif" width="25" height="22" alt="Dog Paws"/></h2>
   <form method="POST" action="/auth/login">
     <div>
       Email <input type="email" name="email" >
@@ -30,7 +30,7 @@ such as a page specific styesheets.
 @section('intro')
 <h1>Register Your Pets!</h1>
       <div class="coll">
-      <p><img src="images/pups.gif" width="210" height="140" alt=""/> Magna aenean mauris feugiat dui luctus nisl purus sem class, in morbi est taciti ultricies donec massa convallis potenti mollis, phasellus arcu blandit turpis gravida fringilla habitant erat. Sed donec eget integer suspendisse donec integer rhoncus, tortor ultricies luctus tristique porttitor netus. Duis tincidunt habitant per cubilia curae justo ultrices torquent proin mattis inceptos est, potenti aliquet. </p>
+      <p><img src="images/pups.gif" width="210" height="140" alt="Dog Paws"/> Magna aenean mauris feugiat dui luctus nisl purus sem class, in morbi est taciti ultricies donec massa convallis potenti mollis, phasellus arcu blandit turpis gravida fringilla habitant erat. Sed donec eget integer suspendisse donec integer rhoncus, tortor ultricies luctus tristique porttitor netus. Duis tincidunt habitant per cubilia curae justo ultrices torquent proin mattis inceptos est, potenti aliquet. </p>
       </div>
       <div class="colreg">
       </div>

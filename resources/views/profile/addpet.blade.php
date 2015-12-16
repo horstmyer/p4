@@ -34,7 +34,7 @@
 					@endforeach
 					</ul>
 	  	@endif
-  		<p><button type="submit"><img src="/images/submit.png" width="100" height="40" alt=""/></button></p>
+  		<p><button type="submit"><img src="/images/submit.png" width="100" height="40" alt="Submit"/></button></p>
     </div>
 	</form>
 
