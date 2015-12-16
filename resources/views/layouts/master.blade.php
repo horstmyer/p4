@@ -9,6 +9,11 @@
 
 <body>
 <div id="container">
+	@if(\Session::has('flash_message'))
+			 <div class='flash_message'>
+					 {{ \Session::get('flash_message') }}
+			 </div>
+@endif
 	<!-- Begin Header -->
 	<div id="header">
    	  	<a href="index.php"><img src="/images/MSCCDogsLogo.gif" width="454" height="126" alt=""/></a>

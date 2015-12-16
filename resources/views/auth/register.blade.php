@@ -11,12 +11,12 @@
 	<form method="POST" action="/register">
 		{!! csrf_field() !!}
 			<div class="regform">
-    			<p>Name <input type="text" name="name" value=""></p>
+    			<p>Name <input type="text" name="name" value="{{ old('name') }}"></p>
         		<p>Email <input type="email" name="email" value="{{ old('email') }}"></p>
         		<p>Password <input type="password" name="password"></p>
         		<p>Confirm Password <input type="password" name="password_confirmation"></p>
-        		<p>Address <input name="address" type="text" value="" size="50"></p>
-        		<p>Phone <input type="text" name="phone" value=""></p>
+        		<p>Address <input name="address" type="text" size="50" value="{{ old('address') }}"></p>
+        		<p>Phone <input type="text" name="phone" value="{{ old('phone') }}"></p>
 				@if(count($errors) > 0)
 					<ul class='errors'>
 						@foreach ($errors->all() as $error)

@@ -1,4 +1,6 @@
 <?php
+
+
 // home page, show login
 Route::get('/', 'IndexController@getIndex');
 // Show Signup/Register
@@ -7,11 +9,13 @@ Route::get('/register', 'Auth\AuthController@getRegister');
 Route::post('/register', 'Auth\AuthController@postRegister');
 // Process login form
 Route::post('/login', 'Auth\AuthController@postLogin');
+// Process logout
+Route::get('/logout', 'Auth\AuthController@getLogout');
+
+Route::group(['middleware' => 'auth'], function() {
     // Show Profile
     Route::get('/profile', 'ProfilesController@getIndex');
     Route::post('/profile', 'ProfilesController@postProfile');
-    // Process logout
-    Route::get('/logout', 'Auth\AuthController@getLogout');
     //edit pet
     Route::get('/profile/edit/{id?}', 'ProfilesController@getEdit');
     //process edit pet
@@ -26,8 +30,7 @@ Route::post('/login', 'Auth\AuthController@postLogin');
     Route::post('profile/addpet', 'ProfilesController@postPet');
     //  Missing
     Route::get('/missing/{id?}', 'MissingController@flyer');
-
-
+});
 Route::get('/confirm-login-worked', function() {
     # You may access the authenticated user via the Auth facade
     $user = Auth::user();

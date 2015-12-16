@@ -20,7 +20,7 @@
        <h2>Here is your profile: </h2>
     </div>
     @if(sizeof($pets) == 0)
-      No pets
+    <h3>Add your pet below!</h3>
     @else
       @foreach($pets as $pet)
       <div class="p1">
@@ -37,7 +37,7 @@
 @stop
 @section('buttons')
 <div>@if(sizeof($pets) <= 3)
-  <h3>Add more pets <a href="profile/addpet"><img src="/images/here.png" width="100" height="40" alt=""/></a><br /><br />Limit 4 pets.</h3>
+  <h3>Adda pet <a href="profile/addpet"><img src="/images/here.png" width="100" height="40" alt=""/></a><br /><br />Limit 4 pets.</h3>
 @else
   <h3>You have reached the maximum number of pets!</h3>
 @endif</div>

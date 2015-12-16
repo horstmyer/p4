@@ -20,9 +20,9 @@
   <form method="POST" action="/profile/addpet">
 	   {!! csrf_field() !!}
      <div class="regform">
-       <p>Pet Name <input type="text" name="petName" value=""></p>
-       <p>Breed <input type="text" name="breed"></p>
-       <p>Photo URL <input type="url" name="photo" value=""></p>
+       <p>Pet Name <input type="text" name="petName" value="{{ old('petName') }}"></p>
+       <p>Breed <input type="text" name="breed" value="{{ old('breed') }}"></p>
+       <p>Photo URL <input type="url" name="photo" value="{{ old('photo') }}"></p>
        <p>Please provide a link(URL) to a photo for your pet.</p>
        <p>If you prefer to email <script type="text/javascript">
      document.write("<a href=\"mail" + "to:" + new Array("doodledog1","gmail.com").join("@") + "\">" + "MSCC Pets" + "</" + "a>");
