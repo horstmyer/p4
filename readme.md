@@ -39,6 +39,6 @@ Packages include:
 * Faker/Factory
 * Packages included with Laravel
 
-## Screencast Demo: http://screencast.com/t/JddMnlfouCRT
+## Screencast Demo: http://screencast.com/t/JVAnJnWy35
 
 Details: Once again, this project was made possible as a direct result of the unending patience and expert coaching provided by the Instructor, TAs and other students.
