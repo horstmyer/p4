@@ -19,7 +19,7 @@
           <input type='hidden' value='{{ $pets->id }}' name='id'>
           <p>Name <input type="text" name="petName" value="{{ $pets->petName }}"></p>
           <p>Breed <input type="text" name="breed" value="{{ $pets->breed }}"></p>
-          <img src='{{ $pets->photo }}' width="200px" height="200px">
+          <img src='{{ $pets->photo }}' width="200" height="200">
           <p>Photo URL <input type="url" name="photo" value="{{ $pets->photo }}"></p>
           <button type="submit"><img src="/images/edit.png" width="100" height="40" alt="Edit"/></button>
         </div>

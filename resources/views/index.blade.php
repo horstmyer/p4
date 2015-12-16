@@ -38,7 +38,7 @@
   <div class="misspet">
     <h2>MISSING</h2>
     <h3>{{ $pet->petName }}</h3>
-        <p><img src='{{ $pet->photo }}' width="200px" height="200px" alt="Pet"></p>
+        <p><img src='{{ $pet->photo }}' width="200" height="200" alt="Pet"></p>
       <p>{{ $pet->breed }}</p>
       <p>Seen {{ $pet->petName }}?<br />  Email Us:
         <script type="text/javascript"> document.write("<a href=\"mail" + "to:" + new Array("doodledog1","gmail.com").join("@") + "\">" + "MSCC Pets" + "</" + "a>");
