@@ -23,8 +23,8 @@
         <p><img src="/images/pups.gif" width="210" height="140" alt="Puppies"/> Welcome to the MSCC website for registration of your pets!</p>
     <p>Nothing is more stressful and frightening than when your dog or cat goes missing.  This is your CHILD that is missing!  They are likely in the neighborhood, but you want to get them back fast.</p>
     <img class="imgr" src="images/cats.png" width="200" height="150" alt="Cats"/>
-    <p>Our website will begin with Phase One and we will offer registration for your pets and notices of missing pets. You can email us if you see any of the pets below.</p>
-    <p>Phase Two is very exciting!  When you register your pet here, we can help you get your pet home as quickly as possible by providing some immediate tools that will aid in your search.  First, when you report your pet as missing on this website, we immediately send an email to all subscribers that contains a photo of your pet and your contact information.  In addition, we will generate a flyer that you can print and distribute to your friends and neighbors.</P>
+    <p>Our website will begin with Phase One and we will offer registration for your pets and notices of missing pets on the home page. Also, when you register your pet as missing, you can generate a PDF that can be downloaded and copied for distribution.  You can email us if you see any of the pets below.</p>
+    <p>Phase Two is very exciting!  When you register your pet here, we can help you get your pet home as quickly as possible by providing some immediate tools that will aid in your search.  First, when you report your pet as missing on this website, we immediately send an email to all subscribers that contains a photo of your pet and your contact information. </P>
     <p>Thank you and check back often for future enhancements!</p>
       </div>
 @stop
